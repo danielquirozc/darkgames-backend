@@ -2,7 +2,7 @@ import cors from 'cors'
 
 const ACCEPTED_ORIGINS = [
   'http://localhost:8080',
-  'https://dark-games.vercel.app'
+  'https://darkgames.vercel.app'
 ]
 
 export const corsMiddleware = (
