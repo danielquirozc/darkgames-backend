@@ -6,7 +6,8 @@ export class GamesController {
       const games = await gamesModel.getAllGames();
       res.json(games);
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      console.log(error);
+      res.status(500).json({ error: 'Database error' });
     }
   }
 }
