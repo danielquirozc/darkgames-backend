@@ -9,11 +9,12 @@ export const corsMiddleware = (
   { acceptedOrigins = ACCEPTED_ORIGINS } = {}
 ) => cors({
   origin: (origin, callback) => {
+    console.log(origin);
     if (acceptedOrigins.includes(origin)) {
       return callback(null, true)
     }
 
-    if (!origin) {
+    if (origin === 'undefined') {
       return callback(null, true)
     }
 
