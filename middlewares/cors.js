@@ -13,11 +13,6 @@ export const corsMiddleware = (
     if (acceptedOrigins.includes(origin)) {
       return callback(null, true)
     }
-
-    if (origin === 'undefined') {
-      return callback(null, true)
-    }
-
     return callback(new Error('Not allowed by CORS'))
   }
 })
